@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>todoリストと便利機能</title>
+        <meta name="description" constnet="javascript独習章末問題であったtodoリスト作成
+        にさらに諸々の機能を追加したなんちゃってアプリ開発">
+        <link rel="stylesheet" href="todolist.css">
+        <script src="todolist.js" defer></script>
+    </head>
+    <body>
+        <h1>Todoリスト</h1>
+        <div id="todo-container">
+            <input type="text" name="" id="create-input">
+            <button id="create-btn">追加</button>
+            <ul id="todo-list">
+                <!--ここに.todo-itemを追加-->
+            </ul>
+        </div>
+        <div id="time-container">
+            <h1>time</h1>
+            <h1 id="clock" style="font-size: 80px">00:00:00</h1>
+        </div>
+        <div id="stopwatch-container" class="card">
+        <h2>ストップウォッチ/カウントダウン</h2>
+        <div id="stopwatch">00:00</div>
+
+        <div class="controls">
+            <button id="mode-up" class="secondary active">カウントアップ</button>
+            <button id="mode-down" class="secondary">カウントダウン</button>
+        </div>
+
+        <div id="count-down-input-wrapper">
+            カウントダウン時間:
+            <input type="number" id="countdown-min" min="0" value="0">分
+            <input type="number" id="countdown-sec" sec="0" mac="59" value="30">秒
+        </div>
+        <div>
+            <button id="start" class="primary">start</button>
+            <button id="stop" class="secondary">stop</button>
+            <button id="reset" class="danger">reset</button>
+        </div>
+        </div>
+
+        <template id="todo-item-tmpl">
+            <li class="todo-item">
+                <span class="todo-item"></span>
+                <input type="button" class="delete-btn" value="削除">
+                <input type="button" class="complete-btn" value="完了">
+            </li>
+        </template>
+    </body>
+</html>
